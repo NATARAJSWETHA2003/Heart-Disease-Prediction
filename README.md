@@ -16,79 +16,74 @@ Heart disease is one of the leading causes of death globally. Early diagnosis ca
 - **Attributes**:
   - Age
   - Sex
-  - Chest Pain Type (cp)
-  - Resting Blood Pressure (trestbps)
-  - Cholesterol (chol)
-  - Fasting Blood Sugar (fbs)
-  - Rest ECG Results (restecg)
-  - Maximum Heart Rate (thalach)
-  - Exercise Induced Angina (exang)
-  - ST Depression (oldpeak)
-  - Number of major vessels (ca)
-  - Thalassemia (thal)
-  - Target (0 = No Disease, 1 = Disease)
+  - Chest pain type (4 values)
+  - Resting blood pressure
+  - Serum cholesterol
+  - Fasting blood sugar > 120 mg/dl
+  - Resting electrocardiographic results (values 0,1,2)
+  - Maximum heart rate achieved
+  - Exercise-induced angina
+  - ST depression induced by exercise relative to rest
+  - The slope of the peak exercise ST segment
+  - Number of major vessels colored by fluoroscopy (0–3)
+  - Thalassemia
+  - **Target**: 0 (no disease), 1 (disease)
 
 ---
 
-## ⚙️ Technologies & Tools
+## ⚙️ Technologies Used
 
-- Python
-- Jupyter Notebook
-- Pandas, NumPy
-- Matplotlib, Seaborn
-- Scikit-learn (SVM, Random Forest, Logistic Regression, KNN)
+- Python (Jupyter Notebook)
+- Libraries: NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn
 
 ---
 
 ## 🔄 Workflow
 
-1. **Data Preprocessing**:
+1. Data Cleaning & Preprocessing
    - Handling missing values
-   - Label Encoding categorical variables
-   - Feature Scaling (StandardScaler)
+   - Encoding categorical features
+   - Feature scaling using StandardScaler
 
-2. **Exploratory Data Analysis (EDA)**:
-   - Correlation heatmap
-   - Distribution plots
-   - Outlier handling (if any)
+2. Exploratory Data Analysis (EDA)
+   - Visualizations using heatmaps, histograms
+   - Correlation analysis
 
-3. **Model Training**:
-   - Logistic Regression
-   - Support Vector Machine
-   - K-Nearest Neighbors
-   - Random Forest Classifier
+3. Model Building
+   - Trained and tested multiple classification models:
+     - Logistic Regression
+     - Support Vector Machine (SVM)
+     - K-Nearest Neighbors (KNN)
+     - Random Forest
 
-4. **Evaluation**:
+4. Model Evaluation
    - Accuracy Score
    - Confusion Matrix
-   - Classification Report
-   - Cross-validation (optional)
+   - Precision, Recall, F1-Score
+   - ROC-AUC Curve
 
 ---
 
-## 📈 Results
+## ✅ Results & Insights
 
-| Model               | Accuracy |
-|--------------------|----------|
-| Logistic Regression| 85%      |
-| Random Forest      | 94%      |
-| SVM                | 86%      |
-| KNN                | 82%      |
-
-> 📌 Random Forest gave the best accuracy of 94% on test data.
+- Random Forest performed better than other models in terms of overall metrics.
+- Logistic Regression and SVM also gave decent results.
+- KNN performance was dependent on scaling and `k` value.
+- Accuracy varied across models, but Random Forest gave **relatively higher performance and generalization**.
 
 ---
 
-## 📌 Future Improvements
+## 🔧 Future Work
 
-- Hyperparameter tuning (GridSearchCV)
-- Deploy as a web app using Flask or Streamlit
-- Use deep learning for larger medical datasets
+- Hyperparameter tuning (GridSearchCV, RandomizedSearchCV)
+- Deploy the model using Streamlit or Flask
+- Add model explainability using SHAP/LIME
+- Try more complex models like XGBoost
 
 ---
 
-## 💡 Learnings
+## ✨ Key Learnings
 
-- Practical application of classification algorithms
-- Importance of preprocessing in medical datasets
-- Model evaluation using confusion matrix & ROC-AUC
+- Preprocessing plays a crucial role in healthcare datasets
+- Ensemble models like Random Forest offer robustness
+- Importance of using multiple evaluation metrics beyond accuracy
