@@ -75,7 +75,7 @@ Heart disease is one of the leading causes of death globally. Early diagnosis ca
 | SVM                | 86%      |
 | KNN                | 82%      |
 
-> 📌 Random Forest gave the best accuracy of 88% on test data.
+> 📌 Random Forest gave the best accuracy of 94% on test data.
 
 ---
 
